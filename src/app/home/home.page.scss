@@ -25,3 +25,12 @@
 #container a {
   text-decoration: none;
 }
+
+ion-item {
+  --min-height: 50px;
+}
+
+ion-input {
+  width: 80%;
+  margin-right: 10px;
+}
