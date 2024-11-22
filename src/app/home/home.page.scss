@@ -28,9 +28,37 @@
 
 ion-item {
   --min-height: 50px;
+  margin-bottom: 10px;
+
 }
 
 ion-input {
   width: 80%;
   margin-right: 10px;
+}
+
+/* Priority Styling */
+.high {
+  color: red;
+  font-weight: bold;
+}
+
+.medium {
+  color: orange;
+}
+
+.low {
+  color: green;
+}
+
+/* Done Task Styling */
+.done {
+  text-decoration: line-through;
+  color: gray !important;
+}
+
+/* Page Padding */
+.ion-padding {
+  padding-left: 20px;
+  padding-right: 20px;
 }
