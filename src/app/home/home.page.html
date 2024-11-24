@@ -1,49 +1,73 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Task List
+      My Task Manager - Organize Your Day
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <!-- Input for Task Description -->
-  <ion-item>
-    <ion-label position="floating">Task</ion-label>
-    <ion-input [(ngModel)]="newTask" placeholder="Enter task"></ion-input>
-  </ion-item>
+  <!-- Introductory Section -->
+  <div class="intro">
+    <h2>Welcome to My Task Manager!</h2>
+    <p>
+      This app helps you organize your daily tasks efficiently. Add your tasks, prioritize them, and track their completion status with ease.
+    </p>
+  </div>
 
-  <!-- Dropdown for Task Priority -->
-  <ion-item>
-    <ion-label>Priority</ion-label>
-    <ion-select [(ngModel)]="newPriority">
-      <ion-select-option value="high">High</ion-select-option>
-      <ion-select-option value="medium">Medium</ion-select-option>
-      <ion-select-option value="low">Low</ion-select-option>
-    </ion-select>
-  </ion-item>
+  <!-- Input Section -->
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Add a New Task</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Input for Task Description -->
+      <ion-item>
+        <ion-label position="floating">Task</ion-label>
+        <ion-input [(ngModel)]="newTask" placeholder="Enter your task here"></ion-input>
+      </ion-item>
 
-  <!-- Add Task Button -->
-  <ion-button expand="full" (click)="addTask()">Add Task</ion-button>
+      <!-- Dropdown for Task Priority -->
+      <ion-item>
+        <ion-label>Priority</ion-label>
+        <ion-select [(ngModel)]="newPriority">
+          <ion-select-option value="high">High</ion-select-option>
+          <ion-select-option value="medium">Medium</ion-select-option>
+          <ion-select-option value="low">Low</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- Add Task Button -->
+      <ion-button expand="block" class="custom-add-task-button" (click)="addTask()">Add Task</ion-button>
+
+    </ion-card-content>
+  </ion-card>
 
   <!-- Task List -->
-  <ion-list>
-    <ion-item *ngFor="let task of tasks">
-      <!-- Checkbox for Done/Not Done -->
-      <ion-checkbox slot="start" [(ngModel)]="task.done" (ionChange)="toggleTask(task)"></ion-checkbox>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Your Tasks</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let task of tasks">
+          <!-- Checkbox for Done/Not Done -->
+          <ion-checkbox slot="start" [(ngModel)]="task.done" (ionChange)="toggleTask(task)"></ion-checkbox>
 
-      <!-- Task Description -->
-      <ion-label [ngClass]="{
-        'high': task.priority === 'high',
-        'medium': task.priority === 'medium',
-        'low': task.priority === 'low',
-        'done': task.done
-      }">
-        {{ task.task }} - <strong>{{ task.priority }}</strong>
-      </ion-label>
+          <!-- Task Description -->
+          <ion-label [ngClass]="{
+            'high': task.priority === 'high',
+            'medium': task.priority === 'medium',
+            'low': task.priority === 'low',
+            'done': task.done
+          }">
+            {{ task.task }} - <strong>{{ task.priority }}</strong>
+          </ion-label>
 
-      <!-- Delete Button -->
-      <ion-button color="danger" (click)="removeTask(task)" fill="clear">Delete</ion-button>
-    </ion-item>
-  </ion-list>
+          <!-- Delete Button -->
+          <ion-button color="danger" (click)="removeTask(task)" fill="clear">Delete</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

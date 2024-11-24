@@ -1,40 +1,20 @@
-#container {
+/* Intro Section Styling */
+.intro {
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  margin-bottom: 20px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-
-ion-item {
-  --min-height: 50px;
-  margin-bottom: 10px;
+.intro h2 {
+  font-size: 1.5rem;
+  color: rgb(143, 28, 111); /* Ionic primary color */
+  margin-bottom: 8px;
+  font-weight: bold;
 
 }
 
-ion-input {
-  width: 80%;
-  margin-right: 10px;
+.intro p {
+  font-size: 1rem;
+  color: #666; /* Subtle gray text */
 }
 
 /* Priority Styling */
@@ -61,4 +41,49 @@ ion-input {
 .ion-padding {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+/* Card Styling */
+ion-card {
+  margin-bottom: 20px;
+    background-color: white; /* White background for the specific sections */
+    border-radius: 12px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visual separation */
+    padding: 16px; /* Optional: Add padding inside cards */
+  }
+
+
+  ion-content {
+    --background:rgb(253, 235, 248); /* Set the background color of the entire page */
+  }
+  
+
+/* Adjust the floating label styling */
+ion-item ion-label {
+  margin-top: 8px;
+  font-size: 1rem; 
+}
+
+ion-item ion-input {
+  padding-top: 10px; 
+}
+
+
+/* Custom button color */
+.custom-add-task-button {
+  --background: rgb(143, 28, 111); /* Blue background color */
+  --color: white; /* White text color */
+  --border-radius: 8px; /* Optional: Rounded corners */
+  --padding-start: 16px; /* Optional: Padding from the left */
+  --padding-end: 16px; /* Optional: Padding from the right */
+}
+
+ion-item ion-input {
+  --padding-top: 16px; /* Adjust padding to prevent overlap */
+  --padding-bottom: 16px; /* Adjust bottom padding as well */
+  margin-top: 32px; /* Prevents input field from getting too close to the label */
+}
+
+ion-card-title{
+  color:rgb(143, 28, 111);
 }
