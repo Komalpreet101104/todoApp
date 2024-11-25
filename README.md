@@ -47,3 +47,24 @@ After installing the dependencies, you can run the application using the followi
 ionic serve
 
 This will open a local development server and you can view your app by navigating to http://localhost:8100 in your browser.
+
+
+Useful VS Code extensions for your Ionic project:
+
+Ionic Extension Pack
+Essential tools and snippets for Ionic development.
+
+Angular Essentials
+Angular snippets, TypeScript support, and better templates.
+
+Prettier
+Automatic code formatting for clean and readable code.
+
+ESLint
+Linting to catch errors and enforce code quality.
+
+HTML CSS Support
+Autocomplete and linting for HTML and CSS.
+
+Path Intellisense
+Autocomplete for file paths in imports.
