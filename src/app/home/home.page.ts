@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomePage {
   tasks: { task: string, priority: string, done: boolean }[] = [];
   newTask: string = '';
-  newPriority: string = 'medium'; // Default priority
+  newPriority: string = 'medium'; 
 
   constructor() {}
 

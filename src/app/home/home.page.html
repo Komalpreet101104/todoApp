@@ -7,6 +7,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+
   <!-- Introductory Section -->
   <div class="intro">
     <h2>Welcome to My Task Manager!</h2>
@@ -21,6 +22,7 @@
       <ion-card-title>Add a New Task</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+
       <!-- Input for Task Description -->
       <ion-item>
         <ion-label position="floating">Task</ion-label>
@@ -51,6 +53,7 @@
     <ion-card-content>
       <ion-list>
         <ion-item *ngFor="let task of tasks">
+          
           <!-- Checkbox for Done/Not Done -->
           <ion-checkbox slot="start" [(ngModel)]="task.done" (ionChange)="toggleTask(task)"></ion-checkbox>
 
