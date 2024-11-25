@@ -51,20 +51,20 @@ This will open a local development server and you can view your app by navigatin
 
 Useful VS Code extensions for your Ionic project:
 
-Ionic Extension Pack
+Ionic Extension Pack: 
 Essential tools and snippets for Ionic development.
 
-Angular Essentials
+Angular Essentials: 
 Angular snippets, TypeScript support, and better templates.
 
-Prettier
+Prettier: 
 Automatic code formatting for clean and readable code.
 
-ESLint
+ESLint: 
 Linting to catch errors and enforce code quality.
 
-HTML CSS Support
+HTML CSS Support: 
 Autocomplete and linting for HTML and CSS.
 
-Path Intellisense
+Path Intellisense: 
 Autocomplete for file paths in imports.
